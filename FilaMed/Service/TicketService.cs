@@ -8,7 +8,7 @@ namespace FilaMed.Service
         private static int Count = 0;
 
 
-        public static HospitalTicket GeneratePassword()
+        public static HospitalTicket GenerateTicket()
         {
             Count++;
 
@@ -16,21 +16,13 @@ namespace FilaMed.Service
 
             string number = Count.ToString("D2");
             string letter = string.Empty;
-
-
-            if (remainder == 1)
+            letter = remainder switch
             {
-                letter = "A";
-            }
-            else if (remainder == 2)
-            {
-
-                letter = "B";
-            }
-            else if (remainder == 3)
-            {
-                letter = "C";
-            }
+                1 => "A",
+                2 => "B",
+                0 => "C",
+                _ => "Opção inválida"
+            };
 
             string format = letter + number;
 
