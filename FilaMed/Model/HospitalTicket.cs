@@ -3,8 +3,8 @@ namespace FilaMed.Model
 {
     internal class HospitalTicket
     {
-        private string Name {  get; set; } = string.Empty;
-        private DateTime IssuedAt { get; set; }
+        public string Name { get; }
+        public DateTime IssuedAt { get; }
 
         public HospitalTicket(string name, DateTime issuedAt)
         {
@@ -15,7 +15,8 @@ namespace FilaMed.Model
 
         public override string ToString()
         {
-            return $"{Name} | {IssuedAt:HH:MM} ";
+            return $"{Name} | {IssuedAt:HH:mm} ";
         }
     }
 }
+
