@@ -30,5 +30,7 @@ namespace FilaMed.Service
 
             return new HospitalTicket(format, now);
         }
+
+
     }
 }
