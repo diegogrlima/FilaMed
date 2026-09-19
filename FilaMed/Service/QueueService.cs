@@ -25,7 +25,7 @@ namespace FilaMed.Service
         }
 
 
-        public HospitalTicket GetNextTicket()
+        public HospitalTicket CallNextTicket()
         {
             // chama o proximo ticket
             return _queue.Dequeue();
